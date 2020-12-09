@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+</head>
+<body>
+<!--  -->
+<div class="navbar" role="navigation">
+  <div class="container-fluid">
+      <div class="navbar-header">
+          <div class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse"
+              style="border-color: transparent;">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+          </div>
+          <div class="navbar-header">
+            <a class="navbar-brand" href="/" style="color: black; font-size: 25px;">🆃🅰🆇🅸 🅴🆇🅿🆁🅴🆂🆂</a>
+          </div>
+          
+          
+              
+          </div>
+          <div class="navbar-collapse collapse" style="float: right;">
+            {% if user.is_authenticated %}
+              <ul class="nav navbar-nav">
+                  <li><a href="/" style="cursor: pointer;"><i style="margin-right: 20px;cursor: pointer;font-size: 25px;color: black;" class="fa fa-home"></i></a></li>
+
+                  <li>
+                    <a href="/new/post/"><i style="margin-right: 20px;font-size: 20px;color: black" class="fa fa-taxi"></i></a>
+                  </li>
+                  
+                  <li>
+                    <a href=""><i style="margin-right: 20px;font-size: 20px;color: black" class="fa fa-user"></i></a>
+                  </li>
+              </ul>
+          </div>
+          {% endif %}
+          </div>
+      </div>
+  </div>
+</div>
+</body>
+</html>

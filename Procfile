@@ -1,0 +1,1 @@
+web: gunicorn taxisett.wsgi --log-file -

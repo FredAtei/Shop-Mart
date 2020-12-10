@@ -7,6 +7,10 @@ In Kenya, Local areas away from the city usually missing ways of getting transpo
 </tr>
 </table>
 
+## Presentation
+
+[Google slides](https://docs.google.com/presentation/d/1HhFTWX8Tzsy1dMWq1tKmwqPmiFf0KFPmh6PyCscup2A/edit#slide=id.ga7426f1c6e_0_190)
+
 ## Author
 Fred Atei
 

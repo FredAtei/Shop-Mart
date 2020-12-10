@@ -8,21 +8,9 @@ from .forms import PhotoForm
 
 # Create your views here.
 def index(request):
-    pictures = Picture.objects.all()
-    ctx = {'pictures': pictures}
-    return render(request, 'Page/index.html', ctx)
+    return render(request, 'Page/index.html')
 
-def upload(request):
-  context = dict( backend_form = PhotoForm())
-
-  if request.method == 'POST':
-    form = PhotoForm(request.POST, request.FILES)
-    context['posted'] = form.instance
-    if form.is_valid():
-        form.save()
-
-  return render(request, 'upload.html', context)
-  
-def photos(request):
-    images = Image.get_images()
-    return render(request, 'all-photos/all_photos.html',{"images":images})
+def taxi(request):
+    images = Image.objects.all()
+    
+    return render(request, 'taxi/taxi.html', {'images': images[::-1]})

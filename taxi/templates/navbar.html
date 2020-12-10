@@ -22,15 +22,17 @@
           </div>
           
           
-              
-          </div>
-          <div class="navbar-collapse collapse" style="float: right;">
-            {% if user.is_authenticated %}
+          <div class="navbar-collapse collapse" style="float: right">
+            
               <ul class="nav navbar-nav">
                   <li><a href="/" style="cursor: pointer;"><i style="margin-right: 20px;cursor: pointer;font-size: 25px;color: black;" class="fa fa-home"></i></a></li>
 
                   <li>
-                    <a href="/new/post/"><i style="margin-right: 20px;font-size: 20px;color: black" class="fa fa-taxi"></i></a>
+                    <a href="{% url 'taxi' %}"><i style="margin-right: 20px;font-size: 20px;color: black" class="fa fa-taxi"></i></a>
+                  </li>
+
+                  <li>
+                    <a href=""><i style="margin-right: 20px;font-size: 20px;color: black" class="fa fa-comments"></i></a>
                   </li>
                   
                   <li>
@@ -38,7 +40,7 @@
                   </li>
               </ul>
           </div>
-          {% endif %}
+         
           </div>
       </div>
   </div>

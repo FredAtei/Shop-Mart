@@ -4,10 +4,12 @@ import cloudinary
 
 # Create your models here.
 class Image(models.Model):
-    
-    image=CloudinaryField('image')
-    image_name=models.CharField(max_length =60)
-    image_description=models.TextField()
+    image = CloudinaryField('image')
+    image_name = models.CharField(max_length =30)
+    image_description = models.TextField() 
+
+    def __str__(self):
+        return self.image_name
 
     def save_image(self):
         self.save()
@@ -24,8 +26,3 @@ class Image(models.Model):
     def filter_by_location(cls,id):
         image_by_location = cls.objects.filter(image_location_id = id)  
         return image_by_location
-
-    @classmethod
-    def filter_by_category(cls,id):
-        image_by_category = cls.objects.filter(image_category_id = id)  
-        return image_by_category

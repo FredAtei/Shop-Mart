@@ -1,0 +1,27 @@
+{% extends 'Page/base.html' %}
+{% load bootstrap3% }
+{% block content %}
+<div class="container" style="background-color: #e6edee;">
+	<span class="float-left container ml-5 mt-3">
+		
+	</span>
+	<div class="container  hvr-float-shadow"  style="color: black;">
+		<div class="profile-layout text-center">
+			<div>
+				<img src="{{ user.profile.profile_picture.url }}" class="rounded-circle border responsive hvr-grow" alt="..."
+				     height="120"
+				     width="120">
+			</div>
+			<h1 class="text-uppercase mt-3 font-weight-bold" style= "font-size: 15px;">{{ user.profile.user }}</h1>
+			<hr style="width: 100px; color: black;">
+			<a href="{{ user.email }}"  ><h4 class="text-body" >{{ user.email }}</h4></a>
+			<div>
+				<a href="/new/profile/" style="text-decoration: none; ">
+					<button class="btn btn-lg mx-3 mt-4 hvr-float-shadow ">Edit Profile</button>
+				</a>
+			</div>
+		</div>
+	</div>
+</div>
+
+{% endblock %}

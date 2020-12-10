@@ -19,7 +19,6 @@ def taxi(request):
     
     return render(request, 'taxi/taxi.html', {'images': images[::-1]})
 
-@login_required(login_url='/accounts/login')
 def profile(request,profile_id):
     profile = Profile.objects.filter(id=profile_id)
     # images = request.user.profile.images.all()
